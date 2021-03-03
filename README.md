@@ -12,7 +12,6 @@ More information on the latest versions
 * <a href="https://www.embarcadero.com/products/delphi">Delphi</a>
 * <a href="https://www.embarcadero.com/products/cbuilder">C++Builder</a>
 * <a href="https://www.embarcadero.com/products/rad-studio">RAD Studio</a>
-* [InterBase](https://www.embarcadero.com/products/interbase)
 * [RAD Server](https://www.embarcadero.com/products/rad-server)
 
 Online Documentation
@@ -20,6 +19,3 @@ Online Documentation
 * <a href="http://docwiki.embarcadero.com/Libraries/en/">Delphi, C++Builder, and RAD Studio Libraries References</a>
 * <a href="http://docwiki.embarcadero.com/CodeExamples/en/">Delphi, C++Builder, and RAD Studio Code Examples</a>
 * <a href="http://docwiki.embarcadero.com/PlatformStatus/en/">Supported Platform Status</a>
-* <a href="http://docwiki.embarcadero.com/IoT/en/">IoT</a>
-* <a href="http://docwiki.embarcadero.com/InterBase/2020/en/">InterBase</a>
-
