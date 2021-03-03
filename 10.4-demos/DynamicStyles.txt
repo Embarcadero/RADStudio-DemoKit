@@ -1,0 +1,36 @@
+uses
+  Vcl.Themes;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  ListBox1.Items.Clear;
+  ListBox1.Items.AddStrings(TStyleManager.StyleNames);
+end;
+
+procedure TForm1.ListBox1Click(Sender: TObject);
+begin
+  if ListBox1.ItemIndex > -1 then
+  begin
+    ListBox1.StyleName := ListBox1.Items[ListBox1.ItemIndex];
+    Panel1.StyleName := ListBox1.Items[ListBox1.ItemIndex];
+  end;
+end;
+
+procedure TForm1.Button1DragOver(Sender, Source: TObject; X, Y: Integer;
+  State: TDragState; var Accept: Boolean);
+begin
+  Accept := (Sender = ListBox1) and (ListBox1.ItemIndex > 0);
+end;
+
+procedure TForm1.Button1DragDrop(Sender, Source: TObject; X, Y: Integer);
+begin
+  if (Source = ListBox1) and (ListBox1.ItemIndex > 0) then
+      (Sender as TControl).StyleName :=
+        ListBox1.Items[ListBox1.ItemIndex];
+end;
+
+procedure TForm1.ListBox1DblClick(Sender: TObject);
+begin
+  if ListBox1.ItemIndex > -1 then
+    Self.StyleName := ListBox1.Items[ListBox1.ItemIndex];
+end;

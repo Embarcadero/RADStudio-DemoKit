@@ -1,0 +1,180 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{BEE5FB5A-7812-4393-A42A-B7D264ACC322}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DBGrid_DBNavigator_Demo\DBGrid_DBNavigator_Demo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ImageIndex_ImageName_Demo\ImageIndex_ImageName.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Messages_Demo\Messages_Demo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Scaled_Jelly_Drawer_Demo\Scaled_Jelly_Drawer_Demo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ScaledGraphicDrawer_Png_Bmp32_Demo\ScaledGraphicDrawer_Demo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Per_Control_Styles\Per_Control_Styles_Colorful.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HealthSystem\Per_Control_Styles_HealthSystem.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VCLControlColorsB\VCLControlColorsButtons.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ManagedRecords\ManagedRecordsGUI.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="LiveBindings\LiveBindingCheckBoxes.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ManagedRecordsConsole\ManagedRecordsConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MetalDemo\MetalDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Dynamic_Per_Conrol_Styles\DynamicStyles.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DBGrid_DBNavigator_Demo">
+        <MSBuild Projects="DBGrid_DBNavigator_Demo\DBGrid_DBNavigator_Demo.dproj"/>
+    </Target>
+    <Target Name="DBGrid_DBNavigator_Demo:Clean">
+        <MSBuild Projects="DBGrid_DBNavigator_Demo\DBGrid_DBNavigator_Demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DBGrid_DBNavigator_Demo:Make">
+        <MSBuild Projects="DBGrid_DBNavigator_Demo\DBGrid_DBNavigator_Demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ImageIndex_ImageName">
+        <MSBuild Projects="ImageIndex_ImageName_Demo\ImageIndex_ImageName.dproj"/>
+    </Target>
+    <Target Name="ImageIndex_ImageName:Clean">
+        <MSBuild Projects="ImageIndex_ImageName_Demo\ImageIndex_ImageName.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ImageIndex_ImageName:Make">
+        <MSBuild Projects="ImageIndex_ImageName_Demo\ImageIndex_ImageName.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Messages_Demo">
+        <MSBuild Projects="Messages_Demo\Messages_Demo.dproj"/>
+    </Target>
+    <Target Name="Messages_Demo:Clean">
+        <MSBuild Projects="Messages_Demo\Messages_Demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Messages_Demo:Make">
+        <MSBuild Projects="Messages_Demo\Messages_Demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Scaled_Jelly_Drawer_Demo">
+        <MSBuild Projects="Scaled_Jelly_Drawer_Demo\Scaled_Jelly_Drawer_Demo.dproj"/>
+    </Target>
+    <Target Name="Scaled_Jelly_Drawer_Demo:Clean">
+        <MSBuild Projects="Scaled_Jelly_Drawer_Demo\Scaled_Jelly_Drawer_Demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Scaled_Jelly_Drawer_Demo:Make">
+        <MSBuild Projects="Scaled_Jelly_Drawer_Demo\Scaled_Jelly_Drawer_Demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ScaledGraphicDrawer_Demo">
+        <MSBuild Projects="ScaledGraphicDrawer_Png_Bmp32_Demo\ScaledGraphicDrawer_Demo.dproj"/>
+    </Target>
+    <Target Name="ScaledGraphicDrawer_Demo:Clean">
+        <MSBuild Projects="ScaledGraphicDrawer_Png_Bmp32_Demo\ScaledGraphicDrawer_Demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ScaledGraphicDrawer_Demo:Make">
+        <MSBuild Projects="ScaledGraphicDrawer_Png_Bmp32_Demo\ScaledGraphicDrawer_Demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Per_Control_Styles_Colorful">
+        <MSBuild Projects="Per_Control_Styles\Per_Control_Styles_Colorful.dproj"/>
+    </Target>
+    <Target Name="Per_Control_Styles_Colorful:Clean">
+        <MSBuild Projects="Per_Control_Styles\Per_Control_Styles_Colorful.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Per_Control_Styles_Colorful:Make">
+        <MSBuild Projects="Per_Control_Styles\Per_Control_Styles_Colorful.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Per_Control_Styles_HealthSystem">
+        <MSBuild Projects="HealthSystem\Per_Control_Styles_HealthSystem.dproj"/>
+    </Target>
+    <Target Name="Per_Control_Styles_HealthSystem:Clean">
+        <MSBuild Projects="HealthSystem\Per_Control_Styles_HealthSystem.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Per_Control_Styles_HealthSystem:Make">
+        <MSBuild Projects="HealthSystem\Per_Control_Styles_HealthSystem.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VCLControlColorsButtons">
+        <MSBuild Projects="VCLControlColorsB\VCLControlColorsButtons.dproj"/>
+    </Target>
+    <Target Name="VCLControlColorsButtons:Clean">
+        <MSBuild Projects="VCLControlColorsB\VCLControlColorsButtons.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLControlColorsButtons:Make">
+        <MSBuild Projects="VCLControlColorsB\VCLControlColorsButtons.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ManagedRecordsGUI">
+        <MSBuild Projects="ManagedRecords\ManagedRecordsGUI.dproj"/>
+    </Target>
+    <Target Name="ManagedRecordsGUI:Clean">
+        <MSBuild Projects="ManagedRecords\ManagedRecordsGUI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ManagedRecordsGUI:Make">
+        <MSBuild Projects="ManagedRecords\ManagedRecordsGUI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LiveBindingCheckBoxes">
+        <MSBuild Projects="LiveBindings\LiveBindingCheckBoxes.dproj"/>
+    </Target>
+    <Target Name="LiveBindingCheckBoxes:Clean">
+        <MSBuild Projects="LiveBindings\LiveBindingCheckBoxes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LiveBindingCheckBoxes:Make">
+        <MSBuild Projects="LiveBindings\LiveBindingCheckBoxes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ManagedRecordsConsole">
+        <MSBuild Projects="ManagedRecordsConsole\ManagedRecordsConsole.dproj"/>
+    </Target>
+    <Target Name="ManagedRecordsConsole:Clean">
+        <MSBuild Projects="ManagedRecordsConsole\ManagedRecordsConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ManagedRecordsConsole:Make">
+        <MSBuild Projects="ManagedRecordsConsole\ManagedRecordsConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MetalDemo">
+        <MSBuild Projects="MetalDemo\MetalDemo.dproj"/>
+    </Target>
+    <Target Name="MetalDemo:Clean">
+        <MSBuild Projects="MetalDemo\MetalDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MetalDemo:Make">
+        <MSBuild Projects="MetalDemo\MetalDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DynamicStyles">
+        <MSBuild Projects="Dynamic_Per_Conrol_Styles\DynamicStyles.dproj"/>
+    </Target>
+    <Target Name="DynamicStyles:Clean">
+        <MSBuild Projects="Dynamic_Per_Conrol_Styles\DynamicStyles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DynamicStyles:Make">
+        <MSBuild Projects="Dynamic_Per_Conrol_Styles\DynamicStyles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DBGrid_DBNavigator_Demo;ImageIndex_ImageName;Messages_Demo;Scaled_Jelly_Drawer_Demo;ScaledGraphicDrawer_Demo;Per_Control_Styles_Colorful;Per_Control_Styles_HealthSystem;VCLControlColorsButtons;ManagedRecordsGUI;LiveBindingCheckBoxes;ManagedRecordsConsole;MetalDemo;DynamicStyles"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DBGrid_DBNavigator_Demo:Clean;ImageIndex_ImageName:Clean;Messages_Demo:Clean;Scaled_Jelly_Drawer_Demo:Clean;ScaledGraphicDrawer_Demo:Clean;Per_Control_Styles_Colorful:Clean;Per_Control_Styles_HealthSystem:Clean;VCLControlColorsButtons:Clean;ManagedRecordsGUI:Clean;LiveBindingCheckBoxes:Clean;ManagedRecordsConsole:Clean;MetalDemo:Clean;DynamicStyles:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DBGrid_DBNavigator_Demo:Make;ImageIndex_ImageName:Make;Messages_Demo:Make;Scaled_Jelly_Drawer_Demo:Make;ScaledGraphicDrawer_Demo:Make;Per_Control_Styles_Colorful:Make;Per_Control_Styles_HealthSystem:Make;VCLControlColorsButtons:Make;ManagedRecordsGUI:Make;LiveBindingCheckBoxes:Make;ManagedRecordsConsole:Make;MetalDemo:Make;DynamicStyles:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

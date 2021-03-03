@@ -1,0 +1,3 @@
+[submodule "demos/RADStudio10.4Demos"]
+	path = demos/_ShippingSamples/
+	url = https://github.com/Embarcadero/RADStudio10.4Demos.git
