@@ -1,0 +1,194 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  Caption = 'FireMonkey '#55357#56613#55357#56338' Emoji'
+  ClientHeight = 565
+  ClientWidth = 1038
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 1038.000000000000000000
+    Size.Height = 565.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 1
+    TabPosition = PlatformDefault
+    Sizes = (
+      1038s
+      539s
+      1038s
+      539s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 50.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Emoji'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Label1: TLabel
+        Align = Top
+        StyledSettings = [Family, Style, FontColor]
+        Size.Width = 1038.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 32.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 'RAD Studio 10.4 - Emoji Support Demo'
+        TabOrder = 0
+      end
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        DisableMouseWheel = True
+        Lines.Strings = (
+          #9977#65039#8205#9792#65039#9977#65039#8205#9794#65039' Delphi Rocks! '
+          #55357#56613#55357#56338' FireMonkey Rocks too!'
+          #55357#56359'Also on Linux!')
+        StyledSettings = [Family, Style, FontColor]
+        TextSettings.Font.Size = 72.000000000000000000
+        Align = Client
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Size.Width = 1018.000000000000000000
+        Size.Height = 342.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 1014.000000000000000000
+        Viewport.Height = 338.000000000000000000
+      end
+      object Panel1: TPanel
+        Align = Bottom
+        Padding.Left = 20.000000000000000000
+        Padding.Top = 20.000000000000000000
+        Padding.Right = 20.000000000000000000
+        Padding.Bottom = 20.000000000000000000
+        Position.Y = 403.000000000000000000
+        Size.Width = 1038.000000000000000000
+        Size.Height = 136.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Button2: TButton
+          Align = Left
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 20.000000000000000000
+          Position.Y = 20.000000000000000000
+          Size.Width = 300.000000000000000000
+          Size.Height = 96.000000000000000000
+          Size.PlatformDefault = False
+          Text = #55356#57266' Roll Dice'
+          TextSettings.Font.Size = 48.000000000000000000
+        end
+        object Button3: TButton
+          Align = Left
+          StyledSettings = [Family, Style, FontColor]
+          Margins.Left = 10.000000000000000000
+          Position.X = 330.000000000000000000
+          Position.Y = 20.000000000000000000
+          Size.Width = 300.000000000000000000
+          Size.Height = 96.000000000000000000
+          Size.PlatformDefault = False
+          Text = #55356#57256' Paint!'
+          TextSettings.Font.Size = 48.000000000000000000
+        end
+        object Button4: TButton
+          Align = Left
+          StyledSettings = [Family, Style, FontColor]
+          Margins.Left = 10.000000000000000000
+          Position.X = 640.000000000000000000
+          Position.Y = 20.000000000000000000
+          Size.Width = 369.000000000000000000
+          Size.Height = 96.000000000000000000
+          Size.PlatformDefault = False
+          Text = #55356#57272' Let'#39's Play!'
+          TextSettings.Font.Size = 48.000000000000000000
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 43.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'ZWJ'
+      ExplicitSize.cx = 43.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Label2: TLabel
+        Align = Top
+        StyledSettings = [Family, Style, FontColor]
+        Size.Width = 1038.000000000000000000
+        Size.Height = 97.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 32.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 
+          'An Emoji ZWJ Sequence is a specific combination of emojis,  join' +
+          'ed with a Zero Width Joiner character, which display as a single' +
+          ' emoji.'
+        TabOrder = 2
+      end
+      object Label3: TLabel
+        Align = Top
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 97.000000000000000000
+        Size.Width = 1038.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 24.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 
+          'Zero Width Joiner (Codepoint U+200D), pronounced "zwidge", is no' +
+          't an emoji and has no appearance by itself. This is an invisible' +
+          ' character when used alone.'
+        TabOrder = 0
+      end
+      object Memo2: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        DisableMouseWheel = True
+        Lines.Strings = (
+          #55357#56424'Man, '#55357#56425' Woman, '#55357#56423' Girl, '#55357#56422' Boy'
+          #55357#56424#8205#55357#56425#8205#55357#56423#8205#55357#56422#8205' Family: Man, Woman, Girl, Boy'
+          #55357#56424#8205#55357#56425#8205#55357#56422' Family: Man, Woman, Boy'
+          #55357#56424#8205#55357#56425#8205#55357#56423' Family: Man, Woman, Girl'
+          #55357#56425#8205#55357#56425#8205#55357#56423#8205#55357#56423' Family: Woman, Woman, Girl, Girl')
+        StyledSettings = [Family, Style, FontColor]
+        TextSettings.Font.Size = 48.000000000000000000
+        Align = Client
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Size.Width = 1018.000000000000000000
+        Size.Height = 349.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 1014.000000000000000000
+        Viewport.Height = 345.000000000000000000
+      end
+    end
+  end
+end
