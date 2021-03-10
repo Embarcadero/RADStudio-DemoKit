@@ -15,6 +15,9 @@
         <Projects Include="VersionInfo\VersionInfo.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="EdgeView\EdgeView.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -59,14 +62,23 @@
     <Target Name="VersionInfo:Make">
         <MSBuild Projects="VersionInfo\VersionInfo.dproj" Targets="Make"/>
     </Target>
+    <Target Name="EdgeView">
+        <MSBuild Projects="EdgeView\EdgeView.dproj"/>
+    </Target>
+    <Target Name="EdgeView:Clean">
+        <MSBuild Projects="EdgeView\EdgeView.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EdgeView:Make">
+        <MSBuild Projects="EdgeView\EdgeView.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="ControlListDrawDemo;ControlListLiveBindingDemo;NumberBoxDemo;VersionInfo"/>
+        <CallTarget Targets="ControlListDrawDemo;ControlListLiveBindingDemo;NumberBoxDemo;VersionInfo;EdgeView"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ControlListDrawDemo:Clean;ControlListLiveBindingDemo:Clean;NumberBoxDemo:Clean;VersionInfo:Clean"/>
+        <CallTarget Targets="ControlListDrawDemo:Clean;ControlListLiveBindingDemo:Clean;NumberBoxDemo:Clean;VersionInfo:Clean;EdgeView:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ControlListDrawDemo:Make;ControlListLiveBindingDemo:Make;NumberBoxDemo:Make;VersionInfo:Make"/>
+        <CallTarget Targets="ControlListDrawDemo:Make;ControlListLiveBindingDemo:Make;NumberBoxDemo:Make;VersionInfo:Make;EdgeView:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
