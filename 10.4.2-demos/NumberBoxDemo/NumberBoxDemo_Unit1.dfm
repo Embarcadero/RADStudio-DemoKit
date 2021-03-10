@@ -105,8 +105,7 @@ object NumBoxDemo: TNumBoxDemo
     Font.Height = 30
     Font.Name = 'Tahoma'
     Font.Style = []
-    MinValue = -1000.000000000000000000
-    MaxValue = 1000.000000000000000000
+    MaxLength = 1
     ParentDoubleBuffered = False
     ParentFont = False
     TabOrder = 0
@@ -122,6 +121,8 @@ object NumBoxDemo: TNumBoxDemo
     Width = 129
     Height = 17
     Caption = 'Accept Expressions'
+    Checked = True
+    State = cbChecked
     TabOrder = 1
   end
   object CheckBox2: TCheckBox
@@ -142,7 +143,6 @@ object NumBoxDemo: TNumBoxDemo
     Anchors = [akTop, akRight]
     Caption = 'Spin Button Options'
     TabOrder = 3
-    ExplicitLeft = 449
     object Label8: TLabel
       Left = 10
       Top = 142
@@ -217,7 +217,7 @@ object NumBoxDemo: TNumBoxDemo
       Height = 21
       Alignment = taCenter
       TabOrder = 2
-      Value = 17.000000000000000000
+      Value = 24.000000000000000000
       SpinButtonOptions.Placement = nbspCompact
     end
     object NumberBox10: TNumberBox
@@ -308,6 +308,7 @@ object NumBoxDemo: TNumBoxDemo
     Height = 100
     Anchors = [akRight, akBottom]
     Caption = 'Currency Format'
+    ItemIndex = 0
     Items.Strings = (
       '$0.00'
       '0.00$'
@@ -343,6 +344,7 @@ object NumBoxDemo: TNumBoxDemo
     Height = 21
     Alignment = taCenter
     TabOrder = 10
+    Value = 1.000000000000000000
     SpinButtonOptions.Placement = nbspCompact
   end
   object NumberBox5: TNumberBox
@@ -362,7 +364,6 @@ object NumBoxDemo: TNumBoxDemo
     Height = 21
     Alignment = taCenter
     TabOrder = 12
-    Value = 1000.000000000000000000
     SpinButtonOptions.Placement = nbspCompact
   end
   object NumberBox7: TNumberBox
@@ -372,7 +373,6 @@ object NumBoxDemo: TNumBoxDemo
     Height = 21
     Alignment = taCenter
     TabOrder = 13
-    Value = -1000.000000000000000000
     SpinButtonOptions.Placement = nbspCompact
   end
   object CheckBox4: TCheckBox
@@ -431,9 +431,8 @@ object NumBoxDemo: TNumBoxDemo
     Top = 185
     Width = 80
     Height = 21
-    ItemIndex = 0
     TabOrder = 20
-    Text = '$'
+    OnChange = ComboBox1Change
     Items.Strings = (
       '$'
       #163
@@ -480,7 +479,7 @@ object NumBoxDemo: TNumBoxDemo
     Methods = <>
     OutputConverters = <>
     Left = 124
-    Top = 61
+    Top = 69
     object LinkControlToPropertyAcceptExpressions: TLinkControlToProperty
       Category = 'Quick Bindings'
       Control = CheckBox1
@@ -641,17 +640,6 @@ object NumBoxDemo: TNumBoxDemo
       Track = True
       Component = NumberBox1
       ComponentProperty = 'LargeStep'
-    end
-    object LinkFillControlToPropertyCurrencyString: TLinkFillControlToProperty
-      Category = 'Quick Bindings'
-      Track = True
-      Control = ComboBox1
-      Component = NumberBox1
-      ComponentProperty = 'CurrencyString'
-      AutoFill = True
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
     end
     object LinkControlToPropertyFontHeight: TLinkControlToProperty
       Category = 'Quick Bindings'

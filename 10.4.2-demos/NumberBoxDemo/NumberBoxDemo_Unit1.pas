@@ -78,7 +78,6 @@ type
     LinkControlToPropertySpinButtonOptionsArrowDisabledColor: TLinkControlToProperty;
     LinkControlToPropertyLargeStep: TLinkControlToProperty;
     ComboBox1: TComboBox;
-    LinkFillControlToPropertyCurrencyString: TLinkFillControlToProperty;
     Label15: TLabel;
     MainMenu1: TMainMenu;
     mnuStyle: TMenuItem;
@@ -96,8 +95,10 @@ type
     procedure StyleMenuItemClick(Sender: TObject);
     procedure Exit1Click(Sender: TObject);
     procedure ComboBox2Change(Sender: TObject);
+    procedure ComboBox1Change(Sender: TObject);
   private
     { Private declarations }
+    procedure unused;
   public
     { Public declarations }
   end;
@@ -110,7 +111,14 @@ implementation
 {$R *.dfm}
 
 uses
-  TypInfo, VCL.Themes, IOUtils;
+  TypInfo, VCL.Themes, IOUtils, Generics.Collections;
+
+procedure TNumBoxDemo.ComboBox1Change(Sender: TObject);
+begin
+  NumberBox1.Mode := nbmCurrency;
+  NumberBox1.CurrencyString := ComboBox1.Text;
+  rdoMode.ItemIndex := ord(nbmCurrency);
+end;
 
 procedure TNumBoxDemo.ComboBox2Change(Sender: TObject);
 begin
@@ -191,7 +199,9 @@ end;
 
 procedure TNumBoxDemo.rdoCurrencyFormatClick(Sender: TObject);
 begin
+  NumberBox1.Mode := nbmCurrency;
   NumberBox1.CurrencyFormat := rdoCurrencyFormat.ItemIndex;
+  rdoMode.ItemIndex := ord(nbmCurrency);
 end;
 
 procedure TNumBoxDemo.rdoModeClick(Sender: TObject);
@@ -208,5 +218,12 @@ procedure TNumBoxDemo.StyleMenuItemClick(Sender: TObject);
 begin
   TStyleManager.TrySetStyle(TMenuItem(Sender).Caption.Replace('&','',[rfReplaceAll]));
 end;
+
+procedure TNumBoxDemo.unused;
+begin
+
+end;
+
+initialization
 
 end.

@@ -42,6 +42,9 @@
         <Projects Include="Dynamic_Per_Conrol_Styles\DynamicStyles.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="EmojiDemo\EmojiDemo.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -167,14 +170,23 @@
     <Target Name="DynamicStyles:Make">
         <MSBuild Projects="Dynamic_Per_Conrol_Styles\DynamicStyles.dproj" Targets="Make"/>
     </Target>
+    <Target Name="EmojiDemo">
+        <MSBuild Projects="EmojiDemo\EmojiDemo.dproj"/>
+    </Target>
+    <Target Name="EmojiDemo:Clean">
+        <MSBuild Projects="EmojiDemo\EmojiDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EmojiDemo:Make">
+        <MSBuild Projects="EmojiDemo\EmojiDemo.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DBGrid_DBNavigator_Demo;ImageIndex_ImageName;Messages_Demo;Scaled_Jelly_Drawer_Demo;ScaledGraphicDrawer_Demo;Per_Control_Styles_Colorful;Per_Control_Styles_HealthSystem;VCLControlColorsButtons;ManagedRecordsGUI;LiveBindingCheckBoxes;ManagedRecordsConsole;MetalDemo;DynamicStyles"/>
+        <CallTarget Targets="DBGrid_DBNavigator_Demo;ImageIndex_ImageName;Messages_Demo;Scaled_Jelly_Drawer_Demo;ScaledGraphicDrawer_Demo;Per_Control_Styles_Colorful;Per_Control_Styles_HealthSystem;VCLControlColorsButtons;ManagedRecordsGUI;LiveBindingCheckBoxes;ManagedRecordsConsole;MetalDemo;DynamicStyles;EmojiDemo"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DBGrid_DBNavigator_Demo:Clean;ImageIndex_ImageName:Clean;Messages_Demo:Clean;Scaled_Jelly_Drawer_Demo:Clean;ScaledGraphicDrawer_Demo:Clean;Per_Control_Styles_Colorful:Clean;Per_Control_Styles_HealthSystem:Clean;VCLControlColorsButtons:Clean;ManagedRecordsGUI:Clean;LiveBindingCheckBoxes:Clean;ManagedRecordsConsole:Clean;MetalDemo:Clean;DynamicStyles:Clean"/>
+        <CallTarget Targets="DBGrid_DBNavigator_Demo:Clean;ImageIndex_ImageName:Clean;Messages_Demo:Clean;Scaled_Jelly_Drawer_Demo:Clean;ScaledGraphicDrawer_Demo:Clean;Per_Control_Styles_Colorful:Clean;Per_Control_Styles_HealthSystem:Clean;VCLControlColorsButtons:Clean;ManagedRecordsGUI:Clean;LiveBindingCheckBoxes:Clean;ManagedRecordsConsole:Clean;MetalDemo:Clean;DynamicStyles:Clean;EmojiDemo:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DBGrid_DBNavigator_Demo:Make;ImageIndex_ImageName:Make;Messages_Demo:Make;Scaled_Jelly_Drawer_Demo:Make;ScaledGraphicDrawer_Demo:Make;Per_Control_Styles_Colorful:Make;Per_Control_Styles_HealthSystem:Make;VCLControlColorsButtons:Make;ManagedRecordsGUI:Make;LiveBindingCheckBoxes:Make;ManagedRecordsConsole:Make;MetalDemo:Make;DynamicStyles:Make"/>
+        <CallTarget Targets="DBGrid_DBNavigator_Demo:Make;ImageIndex_ImageName:Make;Messages_Demo:Make;Scaled_Jelly_Drawer_Demo:Make;ScaledGraphicDrawer_Demo:Make;Per_Control_Styles_Colorful:Make;Per_Control_Styles_HealthSystem:Make;VCLControlColorsButtons:Make;ManagedRecordsGUI:Make;LiveBindingCheckBoxes:Make;ManagedRecordsConsole:Make;MetalDemo:Make;DynamicStyles:Make;EmojiDemo:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

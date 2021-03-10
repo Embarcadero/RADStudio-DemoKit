@@ -62,8 +62,17 @@ __history/
 __recovery/
 *.~*
 
+*.delphilsp.json
+**/Win64/Release/**
+**/Win32/Release/**
+**/Win64/Debug/**
+**/Win32/Debug/**
+*.deployproj
+*.template.xml
+
 # Castalia statistics file (since XE7 Castalia is distributed with Delphi)
 *.stat
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
+

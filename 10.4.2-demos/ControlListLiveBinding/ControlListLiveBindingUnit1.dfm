@@ -3,7 +3,7 @@ object frmCtrlListDemo3: TfrmCtrlListDemo3
   Top = 0
   Caption = 'TControlList LiveBindings Demo'
   ClientHeight = 442
-  ClientWidth = 553
+  ClientWidth = 602
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,13 +11,14 @@ object frmCtrlListDemo3: TfrmCtrlListDemo3
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object ControlList1: TControlList
     Left = 0
-    Top = 60
-    Width = 553
-    Height = 382
+    Top = 82
+    Width = 602
+    Height = 360
     Align = alClient
     ItemCount = 200
     ItemWidth = 125
@@ -35,13 +36,11 @@ object frmCtrlListDemo3: TfrmCtrlListDemo3
     TabOrder = 0
     OnBeforeDrawItem = ControlList1BeforeDrawItem
     OnItemClick = ControlList1ItemClick
-    ExplicitTop = 41
-    ExplicitHeight = 271
     object lblColorValue: TLabel
       AlignWithMargins = True
       Left = 10
       Top = 25
-      Width = 73
+      Width = 36
       Height = 13
       Margins.Left = 10
       Margins.Top = 2
@@ -80,68 +79,65 @@ object frmCtrlListDemo3: TfrmCtrlListDemo3
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 553
-    Height = 60
+    Width = 602
+    Height = 82
     Align = alTop
     Caption = ' '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
-    ExplicitTop = 2
     object Label1: TLabel
-      Left = 36
-      Top = 10
-      Width = 66
-      Height = 13
+      Left = 12
+      Top = 9
+      Width = 96
+      Height = 19
       Caption = 'Record Count'
     end
-    object btnFirst: TSpeedButton
+    object btnJump: TSpeedButton
       Left = 195
       Top = 28
-      Width = 30
-      Height = 22
-      Caption = 'First'
-      OnClick = btnFirstClick
-    end
-    object btnLast: TSpeedButton
-      Left = 226
-      Top = 28
-      Width = 30
-      Height = 22
-      Caption = 'Last'
-      OnClick = btnLastClick
+      Width = 46
+      Height = 27
+      Caption = 'Jump'
+      OnClick = btnJumpClick
     end
     object Label2: TLabel
-      Left = 164
+      Left = 140
       Top = 9
-      Width = 53
-      Height = 13
+      Width = 78
+      Height = 19
       Caption = 'Item Index'
     end
     object Label3: TLabel
-      Left = 297
+      Left = 265
       Top = 9
-      Width = 56
-      Height = 13
+      Width = 84
+      Height = 19
       Caption = 'Item Height'
     end
     object Label4: TLabel
-      Left = 376
+      Left = 369
       Top = 9
-      Width = 53
-      Height = 13
+      Width = 79
+      Height = 19
       Caption = 'Item Width'
     end
     object Label5: TLabel
-      Left = 448
+      Left = 463
       Top = 9
-      Width = 62
-      Height = 13
+      Width = 93
+      Height = 19
       Caption = 'Item Margins'
     end
     object numCount: TNumberBox
-      Left = 36
-      Top = 29
-      Width = 66
-      Height = 21
+      Left = 12
+      Top = 28
+      Width = 96
+      Height = 27
       Alignment = taCenter
       MaxValue = 200.000000000000000000
       TabOrder = 0
@@ -152,7 +148,7 @@ object frmCtrlListDemo3: TfrmCtrlListDemo3
       Left = 128
       Top = 28
       Width = 65
-      Height = 21
+      Height = 27
       Alignment = taCenter
       MaxValue = 200.000000000000000000
       TabOrder = 1
@@ -161,29 +157,29 @@ object frmCtrlListDemo3: TfrmCtrlListDemo3
     object NumberBox2: TNumberBox
       Left = 369
       Top = 28
-      Width = 66
-      Height = 21
+      Width = 79
+      Height = 27
       Alignment = taCenter
       MaxValue = 200.000000000000000000
       TabOrder = 2
-      Value = 150.000000000000000000
+      Value = 125.000000000000000000
       SpinButtonOptions.Placement = nbspInline
     end
     object NumberBox3: TNumberBox
-      Left = 446
+      Left = 463
       Top = 28
-      Width = 66
-      Height = 21
+      Width = 93
+      Height = 27
       Alignment = taCenter
       MaxValue = 200.000000000000000000
       TabOrder = 3
       SpinButtonOptions.Placement = nbspInline
     end
     object NumberBox1: TNumberBox
-      Left = 292
+      Left = 265
       Top = 28
-      Width = 66
-      Height = 21
+      Width = 84
+      Height = 27
       Alignment = taCenter
       MaxValue = 200.000000000000000000
       TabOrder = 4

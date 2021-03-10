@@ -3,9 +3,6 @@
         <ProjectGuid>{485328C8-3836-4C57-ABFD-3FB27361FEAD}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="ControlList1\ControlList_Demo1.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="ControlListDraw\ControlListDrawDemo.dproj">
             <Dependencies/>
         </Projects>
@@ -13,6 +10,9 @@
             <Dependencies/>
         </Projects>
         <Projects Include="NumberBoxDemo\NumberBoxDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VersionInfo\VersionInfo.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -23,15 +23,6 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="ControlList_Demo1">
-        <MSBuild Projects="ControlList1\ControlList_Demo1.dproj"/>
-    </Target>
-    <Target Name="ControlList_Demo1:Clean">
-        <MSBuild Projects="ControlList1\ControlList_Demo1.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ControlList_Demo1:Make">
-        <MSBuild Projects="ControlList1\ControlList_Demo1.dproj" Targets="Make"/>
-    </Target>
     <Target Name="ControlListDrawDemo">
         <MSBuild Projects="ControlListDraw\ControlListDrawDemo.dproj"/>
     </Target>
@@ -59,14 +50,23 @@
     <Target Name="NumberBoxDemo:Make">
         <MSBuild Projects="NumberBoxDemo\NumberBoxDemo.dproj" Targets="Make"/>
     </Target>
+    <Target Name="VersionInfo">
+        <MSBuild Projects="VersionInfo\VersionInfo.dproj"/>
+    </Target>
+    <Target Name="VersionInfo:Clean">
+        <MSBuild Projects="VersionInfo\VersionInfo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VersionInfo:Make">
+        <MSBuild Projects="VersionInfo\VersionInfo.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="ControlList_Demo1;ControlListDrawDemo;ControlListLiveBindingDemo;NumberBoxDemo"/>
+        <CallTarget Targets="ControlListDrawDemo;ControlListLiveBindingDemo;NumberBoxDemo;VersionInfo"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ControlList_Demo1:Clean;ControlListDrawDemo:Clean;ControlListLiveBindingDemo:Clean;NumberBoxDemo:Clean"/>
+        <CallTarget Targets="ControlListDrawDemo:Clean;ControlListLiveBindingDemo:Clean;NumberBoxDemo:Clean;VersionInfo:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ControlList_Demo1:Make;ControlListDrawDemo:Make;ControlListLiveBindingDemo:Make;NumberBoxDemo:Make"/>
+        <CallTarget Targets="ControlListDrawDemo:Make;ControlListLiveBindingDemo:Make;NumberBoxDemo:Make;VersionInfo:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

@@ -28,8 +28,7 @@ type
     LinkPropertyToFieldCaption: TLinkPropertyToField;
     numIndex: TNumberBox;
     LinkControlToPropertyMaxValue: TLinkControlToProperty;
-    btnFirst: TSpeedButton;
-    btnLast: TSpeedButton;
+    btnJump: TSpeedButton;
     Label2: TLabel;
     LinkControlToPropertyItemIndex: TLinkControlToProperty;
     NumberBox1: TNumberBox;
@@ -47,8 +46,7 @@ type
     procedure ControlList1BeforeDrawItem(AIndex: Integer; ACanvas: TCanvas;
       ARect: TRect; AState: TOwnerDrawState);
     procedure ControlList1ItemClick(Sender: TObject);
-    procedure btnFirstClick(Sender: TObject);
-    procedure btnLastClick(Sender: TObject);
+    procedure btnJumpClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,25 +60,25 @@ implementation
 
 {$R *.dfm}
 
-procedure TfrmCtrlListDemo3.btnFirstClick(Sender: TObject);
+procedure TfrmCtrlListDemo3.btnJumpClick(Sender: TObject);
 begin
-  ControlList1.ItemIndex := 0;
-end;
-
-procedure TfrmCtrlListDemo3.btnLastClick(Sender: TObject);
-begin
-  ControlList1.ItemIndex := ControlList1.ItemCount;
+  if ControlList1.ItemIndex > ControlList1.ItemCount div 2 then
+    ControlList1.ItemIndex := 0
+  else
+    ControlList1.ItemIndex := ControlList1.ItemCount;
 end;
 
 procedure TfrmCtrlListDemo3.ControlList1BeforeDrawItem(AIndex: Integer;
   ACanvas: TCanvas; ARect: TRect; AState: TOwnerDrawState);
 begin
   ACanvas.Brush.Color := StrToInt(lblColorValue.Caption);
-  ACanvas.Pen.Width := 5;
+  var BaseWidth := 5;
+  var PenWidth: Integer := BaseWidth;
+  ACanvas.Pen.Width := PenWidth;
   if odSelected in AState then
-    ACanvas.Pen.Color := clBlack
+    ACanvas.Pen.Color := clWindowText
   else
-    ACanvas.Pen.Color := clWhite;
+    ACanvas.Pen.Color := clWindow;
   ACanvas.Rectangle(ARect);
   lblIndex.Caption := Format('#%d',[AIndex]);
 end;

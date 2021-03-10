@@ -28,17 +28,17 @@ implementation
 
 procedure TScaled_Jelly_Drawer_MainForm.FormCreate(Sender: TObject);
 begin
-  Image1.Picture.Graphic.DisableScaledDrawer;
+  BMP.Picture.Graphic.DisableScaledDrawer;
 end;
 
 procedure TScaled_Jelly_Drawer_MainForm.RadioGroup1Click(Sender: TObject);
 begin
   case RadioGroup1.ItemIndex of
-    0: Image1.Picture.Graphic.EnableScaledDrawer(TWICScaledGraphicDrawer);
-    1: Image1.Picture.Graphic.EnableScaledDrawer(TD2DScaledGraphicDrawer);
-    2: Image1.Picture.Graphic.DisableScaledDrawer;
+    0: BMP.Picture.Graphic.EnableScaledDrawer(TWICScaledGraphicDrawer);
+    1: BMP.Picture.Graphic.EnableScaledDrawer(TD2DScaledGraphicDrawer);
+    2: BMP.Picture.Graphic.DisableScaledDrawer;
   end;
-  Image1.Repaint;
+  BMP.Repaint;
 end;
 
 end.
