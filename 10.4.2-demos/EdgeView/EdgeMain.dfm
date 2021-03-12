@@ -1,7 +1,7 @@
-object Form4: TForm4
+object EdgeViewForm: TEdgeViewForm
   Left = 0
   Top = 0
-  Caption = 'Form4'
+  Caption = 'EdgeView Demo'
   ClientHeight = 525
   ClientWidth = 635
   Color = clBtnFace
@@ -18,11 +18,12 @@ object Form4: TForm4
     Left = 0
     Top = 57
     Width = 635
-    Height = 390
+    Height = 319
     Align = alClient
     TabOrder = 0
-    OnCreateWebViewCompleted = EdgeBrowser1CreateWebViewCompleted
     OnExecuteScript = EdgeBrowser1ExecuteScript
+    ExplicitTop = 51
+    ExplicitHeight = 390
   end
   object Panel1: TPanel
     Left = 0
@@ -55,51 +56,91 @@ object Form4: TForm4
       Text = 'https://embarcadero.com'
     end
   end
-  object Panel2: TPanel
+  object PageControl1: TPageControl
     Left = 0
-    Top = 447
+    Top = 376
     Width = 635
-    Height = 78
+    Height = 149
+    ActivePage = TabSheet3
     Align = alBottom
-    BevelOuter = bvNone
-    Caption = ' '
     TabOrder = 2
-    object Memo1: TMemo
-      Left = 88
-      Top = 0
-      Width = 547
-      Height = 78
-      Align = alClient
-      Lines.Strings = (
-        'alert("hello Delphi!");')
-      TabOrder = 0
-    end
-    object Panel3: TPanel
-      Left = 0
-      Top = 0
-      Width = 88
-      Height = 78
-      Align = alLeft
-      BevelOuter = bvNone
-      Caption = ' '
-      TabOrder = 1
-      object Button2: TButton
-        Left = 8
-        Top = 11
-        Width = 75
-        Height = 25
-        Caption = 'Exec Script'
+    object TabSheet1: TTabSheet
+      Caption = 'JavaScript'
+      object Memo1: TMemo
+        Left = 88
+        Top = 0
+        Width = 539
+        Height = 121
+        Align = alClient
+        Lines.Strings = (
+          'alert("hello Delphi!");')
         TabOrder = 0
-        OnClick = Button2Click
+        ExplicitWidth = 547
+        ExplicitHeight = 78
       end
-      object Button3: TButton
-        Left = 8
-        Top = 46
-        Width = 75
-        Height = 25
-        Caption = 'View Source'
+      object Panel3: TPanel
+        Left = 0
+        Top = 0
+        Width = 88
+        Height = 121
+        Align = alLeft
+        BevelOuter = bvNone
+        Caption = ' '
         TabOrder = 1
-        OnClick = Button3Click
+        ExplicitHeight = 165
+        object Button2: TButton
+          Left = 7
+          Top = 2
+          Width = 75
+          Height = 25
+          Caption = 'Exec Script'
+          TabOrder = 0
+          OnClick = Button2Click
+        end
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Source'
+      ImageIndex = 2
+      object Panel5: TPanel
+        Left = 0
+        Top = 0
+        Width = 88
+        Height = 121
+        Align = alLeft
+        BevelOuter = bvNone
+        Caption = ' '
+        TabOrder = 0
+        ExplicitLeft = 8
+        ExplicitHeight = 165
+        object Button3: TButton
+          Left = 4
+          Top = 4
+          Width = 78
+          Height = 25
+          Caption = 'View Source'
+          TabOrder = 0
+          OnClick = Button3Click
+        end
+        object Button4: TButton
+          Left = 4
+          Top = 35
+          Width = 78
+          Height = 25
+          Caption = 'Set Source'
+          TabOrder = 1
+          OnClick = Button4Click
+        end
+      end
+      object memoHTML: TMemo
+        Left = 88
+        Top = 0
+        Width = 539
+        Height = 121
+        Align = alClient
+        ScrollBars = ssBoth
+        TabOrder = 1
+        WordWrap = False
       end
     end
   end
