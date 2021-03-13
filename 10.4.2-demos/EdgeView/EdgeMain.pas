@@ -10,26 +10,26 @@ uses
 type
   TEdgeViewForm = class(TForm)
     EdgeBrowser1: TEdgeBrowser;
-    Button1: TButton;
+    btnGo: TButton;
     Edit1: TEdit;
-    Button2: TButton;
-    Button3: TButton;
+    btnExecuteScript: TButton;
+    btnViewSource: TButton;
     Panel1: TPanel;
     Panel3: TPanel;
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
     TabSheet3: TTabSheet;
-    Memo1: TMemo;
+    memoJavaScript: TMemo;
     Panel5: TPanel;
     memoHTML: TMemo;
-    Button4: TButton;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
+    btnSetSource: TButton;
+    procedure btnGoClick(Sender: TObject);
+    procedure btnExecuteScriptClick(Sender: TObject);
+    procedure btnViewSourceClick(Sender: TObject);
     procedure EdgeBrowser1ExecuteScript(Sender: TCustomEdgeBrowser;
       AResult: HRESULT; const AResultObjectAsJson: string);
     procedure FormCreate(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
+    procedure btnSetSourceClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,29 +53,29 @@ begin
     memoHTML.Text := TNetEncoding.URL.Decode(AResultObjectAsJson).DeQuotedString('"');
 end;
 
-procedure TEdgeViewForm.Button1Click(Sender: TObject);
+procedure TEdgeViewForm.btnGoClick(Sender: TObject);
 begin
-  EdgeBrowser1.Navigate(edit1.Text);
+  EdgeBrowser1.Navigate(memoJavaScript.Text);
 end;
 
-procedure TEdgeViewForm.Button2Click(Sender: TObject);
+procedure TEdgeViewForm.btnExecuteScriptClick(Sender: TObject);
 begin
-  EdgeBrowser1.ExecuteScript(Memo1.Text);
+  EdgeBrowser1.ExecuteScript(memoJavaScript.Text);
 end;
 
-procedure TEdgeViewForm.Button3Click(Sender: TObject);
+procedure TEdgeViewForm.btnViewSourceClick(Sender: TObject);
 begin
   EdgeBrowser1.ExecuteScript('encodeURI(document.documentElement.outerHTML)');
 end;
 
-procedure TEdgeViewForm.Button4Click(Sender: TObject);
+procedure TEdgeViewForm.btnSetSourceClick(Sender: TObject);
 begin
   EdgeBrowser1.NavigateToString(memoHTML.Text);
 end;
 
 procedure TEdgeViewForm.FormCreate(Sender: TObject);
 begin
-  EdgeBrowser1.Navigate('http://example.com');
+  EdgeBrowser1.Navigate('https://embarcadero.com');
 end;
 
 end.

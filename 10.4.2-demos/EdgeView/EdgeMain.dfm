@@ -22,8 +22,7 @@ object EdgeViewForm: TEdgeViewForm
     Align = alClient
     TabOrder = 0
     OnExecuteScript = EdgeBrowser1ExecuteScript
-    ExplicitTop = 51
-    ExplicitHeight = 390
+    ExplicitTop = 89
   end
   object Panel1: TPanel
     Left = 0
@@ -37,14 +36,14 @@ object EdgeViewForm: TEdgeViewForm
     DesignSize = (
       635
       57)
-    object Button1: TButton
+    object btnGo: TButton
       Left = 8
       Top = 8
       Width = 41
       Height = 25
       Caption = 'Go'
       TabOrder = 0
-      OnClick = Button1Click
+      OnClick = btnGoClick
     end
     object Edit1: TEdit
       Left = 55
@@ -61,12 +60,12 @@ object EdgeViewForm: TEdgeViewForm
     Top = 376
     Width = 635
     Height = 149
-    ActivePage = TabSheet3
+    ActivePage = TabSheet1
     Align = alBottom
     TabOrder = 2
     object TabSheet1: TTabSheet
       Caption = 'JavaScript'
-      object Memo1: TMemo
+      object memoJavaScript: TMemo
         Left = 88
         Top = 0
         Width = 539
@@ -75,8 +74,6 @@ object EdgeViewForm: TEdgeViewForm
         Lines.Strings = (
           'alert("hello Delphi!");')
         TabOrder = 0
-        ExplicitWidth = 547
-        ExplicitHeight = 78
       end
       object Panel3: TPanel
         Left = 0
@@ -87,15 +84,14 @@ object EdgeViewForm: TEdgeViewForm
         BevelOuter = bvNone
         Caption = ' '
         TabOrder = 1
-        ExplicitHeight = 165
-        object Button2: TButton
+        object btnExecuteScript: TButton
           Left = 7
           Top = 2
           Width = 75
           Height = 25
           Caption = 'Exec Script'
           TabOrder = 0
-          OnClick = Button2Click
+          OnClick = btnExecuteScriptClick
         end
       end
     end
@@ -111,25 +107,23 @@ object EdgeViewForm: TEdgeViewForm
         BevelOuter = bvNone
         Caption = ' '
         TabOrder = 0
-        ExplicitLeft = 8
-        ExplicitHeight = 165
-        object Button3: TButton
+        object btnViewSource: TButton
           Left = 4
           Top = 4
           Width = 78
           Height = 25
           Caption = 'View Source'
           TabOrder = 0
-          OnClick = Button3Click
+          OnClick = btnViewSourceClick
         end
-        object Button4: TButton
+        object btnSetSource: TButton
           Left = 4
           Top = 35
           Width = 78
           Height = 25
           Caption = 'Set Source'
           TabOrder = 1
-          OnClick = Button4Click
+          OnClick = btnSetSourceClick
         end
       end
       object memoHTML: TMemo
