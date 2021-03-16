@@ -1,5 +1,5 @@
 # RAD Studio 10.4 Sydney DemoKit
-These are suplementatl demos and samples specifically for demonstrating Embarcadero RAD Studio 10.4 & 10.4.2 Sydney 
+These are suplemental demos and samples specifically for demonstrating Embarcadero RAD Studio 10.4 & 10.4.2 Sydney 
 
 * Be sure you also have the latest [shipping demos](https://github.com/Embarcadero/RADStudio10.4Demos) 
 * 10.4 Sydney [What's New](http://docwiki.embarcadero.com/RADStudio/Sydney/en/What%27s_New) - [Fixes](http://docwiki.embarcadero.com/RADStudio/Sydney/en/New_features_and_customer_reported_issues_fixed_in_RAD_Studio_10.4)
