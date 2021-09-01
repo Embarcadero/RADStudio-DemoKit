@@ -1,0 +1,102 @@
+object Form20: TForm20
+  Left = 0
+  Top = 0
+  Caption = 'Form20'
+  ClientHeight = 582
+  ClientWidth = 370
+  Padding.Left = 10.000000000000000000
+  Padding.Top = 10.000000000000000000
+  Padding.Right = 10.000000000000000000
+  Padding.Bottom = 10.000000000000000000
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object lstFiles1: TListBox
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 100.000000000000000000
+    Size.Width = 350.000000000000000000
+    Size.Height = 173.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 346.000000000000000000
+    Viewport.Height = 169.000000000000000000
+  end
+  object edtPath: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 2
+    Text = '..\..\'
+    Position.X = 10.000000000000000000
+    Position.Y = 36.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Size.Width = 350.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    Align = Top
+    AutoSize = True
+    Position.X = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 350.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Path'
+    TabOrder = 3
+  end
+  object Button1: TButton
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 68.000000000000000000
+    Size.Width = 350.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Get Files'
+    OnClick = Button1Click
+  end
+  object lblCompressed: TLabel
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 300.000000000000000000
+    Size.Width = 350.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = 'lblCompressed'
+    TabOrder = 6
+  end
+  object lblSize: TLabel
+    Align = Top
+    Position.X = 10.000000000000000000
+    Position.Y = 273.000000000000000000
+    Size.Width = 350.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = 'lblSize'
+    TabOrder = 7
+  end
+  object Button2: TButton
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 327.000000000000000000
+    Size.Width = 350.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Get Files'
+  end
+end
