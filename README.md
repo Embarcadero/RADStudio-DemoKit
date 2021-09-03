@@ -1,4 +1,4 @@
-# RAD Studio 10.4 Sydney DemoKit
+# RAD Studio 10.4 Sydney and 11 Alexandria DemoKit
 These are suplemental demos and samples specifically for demonstrating Embarcadero RAD Studio 10.4 & 10.4.2 Sydney 
 
 * Be sure you also have the latest [shipping demos](https://github.com/Embarcadero/RADStudio10.4Demos) 
