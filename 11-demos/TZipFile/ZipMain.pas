@@ -15,7 +15,7 @@ type
     Button1: TButton;
     lblCompressed: TLabel;
     lblSize: TLabel;
-    Button2: TButton;
+    lblTempFile: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -55,6 +55,8 @@ begin
   lblSize.Text := Format('%d bytes uncompressed', [size]);
   // Zips sub directories too
   TZipFile.ZipDirectoryContents( ZipFileName, edtPath.Text );
+
+  lblTempFile.Text := ZipFileName;
 
   var ZipSize := TFile.GetSize(ZipFileName);
   var ZipValid: String;
