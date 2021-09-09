@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{194A627D-FA34-4CCE-BFDA-0858450DDC50}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Wsl2Gui.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HelloWsl2.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Wsl2Gui">
+        <MSBuild Projects="Wsl2Gui.dproj"/>
+    </Target>
+    <Target Name="Wsl2Gui:Clean">
+        <MSBuild Projects="Wsl2Gui.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Wsl2Gui:Make">
+        <MSBuild Projects="Wsl2Gui.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HelloWsl2">
+        <MSBuild Projects="HelloWsl2.dproj"/>
+    </Target>
+    <Target Name="HelloWsl2:Clean">
+        <MSBuild Projects="HelloWsl2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloWsl2:Make">
+        <MSBuild Projects="HelloWsl2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Wsl2Gui;HelloWsl2"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Wsl2Gui:Clean;HelloWsl2:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Wsl2Gui:Make;HelloWsl2:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
