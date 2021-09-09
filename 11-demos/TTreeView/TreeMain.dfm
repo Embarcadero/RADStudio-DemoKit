@@ -1,9 +1,9 @@
 object Form2: TForm2
   Left = 0
   Top = 0
-  Caption = 'Form2'
-  ClientHeight = 1134
-  ClientWidth = 1279
+  Caption = 'TTreeVew CheckBox Demo'
+  ClientHeight = 1221
+  ClientWidth = 1316
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,12 +14,12 @@ object Form2: TForm2
   OnShow = FormShow
   PixelsPerInch = 192
   DesignSize = (
-    1279
-    1134)
+    1316
+    1221)
   TextHeight = 27
   object Label1: TLabel
     Left = 34
-    Top = 581
+    Top = 608
     Width = 94
     Height = 27
     Margins.Left = 6
@@ -29,8 +29,8 @@ object Form2: TForm2
     Caption = 'State log:'
   end
   object SpeedButton1: TSpeedButton
-    Left = 560
-    Top = 566
+    Left = 555
+    Top = 600
     Width = 97
     Height = 44
     Margins.Left = 6
@@ -40,257 +40,282 @@ object Form2: TForm2
     Anchors = [akTop, akRight]
     Caption = 'Clear'
     OnClick = SpeedButton1Click
+    ExplicitLeft = 574
   end
   object TreeView1: TTreeView
     Left = 34
     Top = 24
-    Width = 623
-    Height = 540
+    Width = 618
+    Height = 564
     Margins.Left = 6
     Margins.Top = 6
     Margins.Right = 6
     Margins.Bottom = 6
     Anchors = [akLeft, akTop, akRight]
+    AutoExpand = True
     CheckBoxes = True
     CheckStyles = [csPartial, csDimmed, csExclusion]
     Indent = 38
-    StateImages = ImageList1
     TabOrder = 0
     OnCheckStateChanged = TreeViewCheckStateChanged
     OnCheckStateChanging = TreeViewCheckStateChanging
     Items.NodeData = {
-      0307000000240000000000000000000000FFFFFFFFFFFFFFFF00000000000000
-      000000000001034F006E006500240000000000000000000000FFFFFFFFFFFFFF
-      FF0000000000000000020000000103540077006F002800000000000000000000
-      00FFFFFFFFFFFFFFFF0000000000000000000000000105540068007200650065
-      00260000000000000000000000FFFFFFFFFFFFFFFF0000000000000000030000
-      00010446006F0075007200260000000000000000000000FFFFFFFFFFFFFFFF00
-      0000000000000000000000010446006900760065002400000000000000000000
-      00FFFFFFFFFFFFFFFF0000000000000000000000000103530069007800280000
-      000000000000000000FFFFFFFFFFFFFFFF000000000000000000000000010553
-      006500760065006E002C0000000000000000000000FFFFFFFFFFFFFFFF000000
-      000000000000000000010753007500700070006F007200740024000000000000
-      0000000000FFFFFFFFFFFFFFFF000000000000000000000000010366006F0072
+      0305000000340000000000000000000000FFFFFFFFFFFFFFFF00000000000000
+      0000000000010B45006D00620061007200630061006400650072006F00320000
+      000000000000000000FFFFFFFFFFFFFFFF000000000000000002000000010A52
+      00410044002000530074007500640069006F002A0000000000000000000000FF
+      FFFFFFFFFFFFFF0000000000000000000000000106440065006C007000680069
       00320000000000000000000000FFFFFFFFFFFFFFFF0000000000000000000000
-      00010A43006800650063006B0042006F00780065007300220000000000000000
-      000000FFFFFFFFFFFFFFFF000000000000000000000000010269006E00300000
-      000000000000000000FFFFFFFFFFFFFFFF000000000000000000000000010954
-      0054007200650065005600690065007700}
-  end
-  object Button1: TButton
-    Left = 685
-    Top = 24
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'Toggle CheckBoxes'
-    TabOrder = 1
-    OnClick = Button1Click
-  end
-  object Button3: TButton
-    Left = 685
-    Top = 184
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'CheckStyles = [csPartial]'
-    TabOrder = 3
-    OnClick = Button3Click
-  end
-  object Button4: TButton
-    Left = 685
-    Top = 264
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'CheckStyles = [csPartial, csDimmed]'
-    TabOrder = 4
-    OnClick = Button4Click
-  end
-  object Button5: TButton
-    Left = 685
-    Top = 342
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'CheckStyles = [csPartial, csExclusion]'
-    TabOrder = 5
-    OnClick = Button5Click
-  end
-  object Button2: TButton
-    Left = 685
-    Top = 104
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'CheckStyles = []'
-    TabOrder = 2
-    OnClick = Button2Click
+      00010A43002B002B004200750069006C00640065007200240000000000000000
+      000000FFFFFFFFFFFFFFFF0000000000000000020000000103560043004C002C
+      0000000000000000000000FFFFFFFFFFFFFFFF00000000000000000200000001
+      07570069006E0064006F0077007300240000000000000000000000FFFFFFFFFF
+      FFFFFF0000000000000000000000000103760031003000240000000000000000
+      000000FFFFFFFFFFFFFFFF000000000000000000000000010376003100310030
+      0000000000000000000000FFFFFFFFFFFFFFFF00000000000000000200000001
+      0949006E00740065006C002F0041004D0044002A0000000000000000000000FF
+      FFFFFFFFFFFFFF0000000000000000000000000106330032002D006200690074
+      002A0000000000000000000000FFFFFFFFFFFFFFFF0000000000000000000000
+      000106360034002D00620069007400340000000000000000000000FFFFFFFFFF
+      FFFFFF000000000000000001000000010B4E0065007700200046006500610074
+      00750072006500320000000000000000000000FFFFFFFFFFFFFFFF0000000000
+      00000000000000010A560065007200790020004E006900630065002100300000
+      000000000000000000FFFFFFFFFFFFFFFF000000000000000001000000010954
+      0054007200650065005600690065007700320000000000000000000000FFFFFF
+      FFFFFFFFFF000000000000000001000000010A43006800650063006B0062006F
+      00780065007300340000000000000000000000FFFFFFFFFFFFFFFF0000000000
+      00000000000000010B4D0075006C00740069002D0053007400610074006500}
   end
   object lstLog: TListBox
     Left = 34
-    Top = 620
-    Width = 623
-    Height = 470
+    Top = 653
+    Width = 618
+    Height = 541
     Margins.Left = 6
     Margins.Top = 6
     Margins.Right = 6
     Margins.Bottom = 6
     Anchors = [akLeft, akTop, akRight, akBottom]
     ItemHeight = 27
-    TabOrder = 6
+    Items.Strings = (
+      'Keeps a log'
+      'of changes '
+      'in check box '
+      'states and '
+      'options')
+    TabOrder = 1
+    ExplicitWidth = 604
+    ExplicitHeight = 540
   end
-  object Button6: TButton
-    Left = 685
-    Top = 424
-    Width = 546
-    Height = 50
+  object Panel1: TPanel
+    Left = 691
+    Top = 24
+    Width = 598
+    Height = 1186
     Margins.Left = 6
     Margins.Top = 6
     Margins.Right = 6
     Margins.Bottom = 6
     Anchors = [akTop, akRight]
-    Caption = 'CheckStyles = [csDimmed, csExclusion]'
-    TabOrder = 7
-    OnClick = Button6Click
-  end
-  object Button7: TButton
-    Left = 685
-    Top = 504
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'CheckStyles = [csPartial, csDimmed, csExclusion]'
-    TabOrder = 8
-    OnClick = Button7Click
-  end
-  object Button8: TButton
-    Left = 685
-    Top = 584
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'Top node NodeCheckState = ncsUnchecked'
-    TabOrder = 9
-    OnClick = Button8Click
-  end
-  object Button9: TButton
-    Left = 685
-    Top = 664
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'Top node NodeCheckState = ncsChecked'
-    TabOrder = 10
-    OnClick = Button9Click
-  end
-  object Button10: TButton
-    Left = 685
-    Top = 744
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'Top node NodeCheckState = ncsPartial'
-    TabOrder = 11
-    OnClick = Button10Click
-  end
-  object Button11: TButton
-    Left = 685
-    Top = 824
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'Top node NodeCheckState = ncsDimmed'
-    TabOrder = 12
-    OnClick = Button11Click
-  end
-  object Button12: TButton
-    Left = 685
-    Top = 904
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'Top node NodeCheckState = ncsExclusion'
-    TabOrder = 13
-    OnClick = Button12Click
-  end
-  object Button13: TButton
-    Left = 685
-    Top = 984
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'Full Expand'
-    TabOrder = 14
-    OnClick = Button13Click
-  end
-  object Button14: TButton
-    Left = 685
-    Top = 1062
-    Width = 546
-    Height = 50
-    Margins.Left = 6
-    Margins.Top = 6
-    Margins.Right = 6
-    Margins.Bottom = 6
-    Anchors = [akTop, akRight]
-    Caption = 'Full Collapse'
-    TabOrder = 15
-    OnClick = Button14Click
-  end
-  object ImageList1: TImageList
-    Height = 32
-    Width = 32
-    Left = 416
-    Top = 176
+    BevelOuter = bvNone
+    Caption = ' '
+    TabOrder = 2
+    ExplicitLeft = 677
+    object Button1: TButton
+      Left = 23
+      Top = 8
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'Toggle CheckBoxes'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object Button10: TButton
+      Left = 23
+      Top = 728
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'Top node NodeCheckState = ncsPartial'
+      TabOrder = 1
+      OnClick = Button10Click
+    end
+    object Button11: TButton
+      Left = 23
+      Top = 808
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'Top node NodeCheckState = ncsDimmed'
+      TabOrder = 2
+      OnClick = Button11Click
+    end
+    object Button12: TButton
+      Left = 23
+      Top = 888
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'Top node NodeCheckState = ncsExclusion'
+      TabOrder = 3
+      OnClick = Button12Click
+    end
+    object Button13: TButton
+      Left = 23
+      Top = 1048
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'Full Expand'
+      TabOrder = 4
+      OnClick = Button13Click
+    end
+    object Button14: TButton
+      Left = 23
+      Top = 1118
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'Full Collapse'
+      TabOrder = 5
+      OnClick = Button14Click
+    end
+    object Button15: TButton
+      Left = 23
+      Top = 970
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'Random States'
+      TabOrder = 6
+      OnClick = Button15Click
+    end
+    object Button2: TButton
+      Left = 23
+      Top = 88
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'CheckStyles = []'
+      TabOrder = 7
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 23
+      Top = 168
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'CheckStyles = [csPartial]'
+      TabOrder = 8
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Left = 23
+      Top = 248
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'CheckStyles = [csPartial, csDimmed]'
+      TabOrder = 9
+      OnClick = Button4Click
+    end
+    object Button5: TButton
+      Left = 23
+      Top = 326
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'CheckStyles = [csPartial, csExclusion]'
+      TabOrder = 10
+      OnClick = Button5Click
+    end
+    object Button6: TButton
+      Left = 23
+      Top = 408
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'CheckStyles = [csDimmed, csExclusion]'
+      TabOrder = 11
+      OnClick = Button6Click
+    end
+    object Button7: TButton
+      Left = 23
+      Top = 488
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'CheckStyles = [csPartial, csDimmed, csExclusion]'
+      TabOrder = 12
+      OnClick = Button7Click
+    end
+    object Button8: TButton
+      Left = 23
+      Top = 568
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'Top node NodeCheckState = ncsUnchecked'
+      TabOrder = 13
+      OnClick = Button8Click
+    end
+    object Button9: TButton
+      Left = 23
+      Top = 648
+      Width = 546
+      Height = 50
+      Margins.Left = 6
+      Margins.Top = 6
+      Margins.Right = 6
+      Margins.Bottom = 6
+      Caption = 'Top node NodeCheckState = ncsChecked'
+      TabOrder = 14
+      OnClick = Button9Click
+    end
   end
   object FDMemTable1: TFDMemTable
     Active = True

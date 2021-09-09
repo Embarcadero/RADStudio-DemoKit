@@ -8,7 +8,8 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.StorageBin, Data.DB, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, Vcl.Buttons;
+  FireDAC.Comp.Client, Vcl.Buttons, Vcl.BaseImageCollection,
+  Vcl.ImageCollection, Vcl.VirtualImageList, Vcl.ExtCtrls;
 
 type
   TForm2 = class(TForm)
@@ -26,13 +27,14 @@ type
     Button10: TButton;
     Button11: TButton;
     Button12: TButton;
-    ImageList1: TImageList;
     FDMemTable1: TFDMemTable;
     FDMemTable1word: TStringField;
     Label1: TLabel;
     Button13: TButton;
     Button14: TButton;
     SpeedButton1: TSpeedButton;
+    Button15: TButton;
+    Panel1: TPanel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -49,15 +51,17 @@ type
       NewCheckState, OldCheckState: TNodeCheckState; var AllowChange: Boolean);
     procedure TreeViewCheckStateChanged(Sender: TCustomTreeView; Node: TTreeNode;
       CheckState: TNodeCheckState);
-    procedure FormCreate(Sender: TObject);
     procedure Button13Click(Sender: TObject);
     procedure Button14Click(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure Button15Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     procedure Log(const Msg: string); overload;
     procedure Log(const Msg: string; const Args: array of const); overload;
+    procedure AllowAllStyles;
   public
     { Public declarations }
   end;
@@ -86,18 +90,12 @@ end;
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
-  {$REGION 'Init'}
-    if TreeView1.CheckBoxes then
-    begin
-      TreeView1.CheckBoxes := False;
-      TreeView1.CheckBoxes := True;
-    end;
-  {$ENDREGION}
+  TreeView1.Items.Clear;
+  lstLog.Clear;
 end;
 
 procedure TForm2.FormShow(Sender: TObject);
 begin
-  TreeView1.Items.Clear;
   FDmemTable1.Open;
 
   while fdMemTable1.RecordCount > 0 do
@@ -180,10 +178,15 @@ begin
   Log('CheckStyles = [csDimmed, csExclusion]')
 end;
 
-procedure TForm2.Button7Click(Sender: TObject);
+procedure TForm2.AllowAllStyles;
 begin
   TreeView1.CheckStyles := [csPartial, csDimmed, csExclusion];
-  Log('CheckStyles = [csPartial, csDimmed, csExclusion]')
+  Log('CheckStyles = [csPartial, csDimmed, csExclusion]');
+end;
+
+procedure TForm2.Button7Click(Sender: TObject);
+begin
+  AllowAllStyles;
 end;
 
 procedure TForm2.Button8Click(Sender: TObject);
@@ -230,6 +233,23 @@ begin
     TreeView1.Items.GetFirstNode.MakeVisible;
   finally
     TreeView1.UnlockDrawing;
+  end;
+end;
+
+procedure TForm2.Button15Click(Sender: TObject);
+begin
+  AllowAllStyles;
+  TreeView1.LockDrawing;
+  lstLog.LockDrawing;
+  try
+    for var i := 0 to pred(TreeView1.Items.Count) do
+    begin
+      var state := Succ(TNodeCheckState(random(5)));
+      TreeView1.Items[i].CheckState := state;
+    end;
+  finally
+    TreeView1.UnlockDrawing;
+    lstLog.UnlockDrawing;
   end;
 end;
 
