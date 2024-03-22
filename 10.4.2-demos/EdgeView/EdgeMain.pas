@@ -55,7 +55,7 @@ end;
 
 procedure TEdgeViewForm.btnGoClick(Sender: TObject);
 begin
-  EdgeBrowser1.Navigate(memoJavaScript.Text);
+  EdgeBrowser1.Navigate(Edit1.Text);
 end;
 
 procedure TEdgeViewForm.btnExecuteScriptClick(Sender: TObject);
